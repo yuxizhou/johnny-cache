@@ -10,7 +10,7 @@ import django
 from redis_cache import cache as redis
 
 
-class CacheClass(redis.CacheClass):
+class CacheClass(redis.RedisCache):
 
     def set(self, key, value, timeout=None, *args, **kwargs):
         if timeout == 0:
